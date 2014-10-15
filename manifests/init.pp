@@ -1,6 +1,6 @@
 class gocd
 inherits gocd::params {
-  ensure_packages('unzip','openjdk-7-jre','apache2')
+  ensure_packages(['unzip','openjdk-7-jre','apache2'])
 
 
   wget::fetch { $server_install_url :
