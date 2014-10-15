@@ -20,9 +20,9 @@ inherits gocd::params {
     require => Package['unzip','openjdk-jre','apache2']
   }
 
-  package { 'gocd-server':
+  package { 'gocd-agent':
     ensure => installed,
-    source => $server_installer,
+    source => $agent_installer,
     provider => 'dpkg',
     require => Package['unzip','openjdk-jre','apache2']
   }
