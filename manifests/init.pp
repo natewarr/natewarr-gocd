@@ -17,14 +17,14 @@ inherits gocd::params {
     ensure => installed,
     source => $server_installer,
     provider => 'dpkg',
-    require => Package['unzip','openjdk-jre','apache2']
+    require => Package['unzip','openjdk-7-jre','apache2']
   }
 
   package { 'gocd-agent':
     ensure => installed,
     source => $agent_installer,
     provider => 'dpkg',
-    require => Package['unzip','openjdk-jre','apache2']
+    require => Package['unzip','openjdk-7-jre','apache2']
   }
 
 }
